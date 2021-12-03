@@ -17,6 +17,7 @@
 - Some css fix
 - In/out mins needs to show
 - Duplicate substitute prevention
+- Vuex
 
 ### Project link
 - Hosted on Netlify. [Check it out](https://scoutium-lineup.netlify.app/)
