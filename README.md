@@ -13,9 +13,13 @@
 ### TODO
 - Substitute modal needs to be arranged.
 - External font not working.
+- Loading action for api response
+- Some css fix
+- In/out mins needs to show
+- Duplicate substitute prevention
 
 ### Project link
-- Hosted on Netlify. 
+- Hosted on Netlify. [Check it out](https://scoutium-lineup.netlify.app/)
 
 ## Project setup
 ```
@@ -32,5 +36,3 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

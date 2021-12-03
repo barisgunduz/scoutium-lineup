@@ -18,7 +18,9 @@
 											<img
 												:src="teamLogo"
 												:alt="teamName"
-											/><span :value="teamName">{{teamName}}</span>
+											/><span :value="teamName">{{
+												teamName
+											}}</span>
 										</div>
 									</div>
 								</div>
@@ -124,6 +126,7 @@
 								>
 									<v-list-item
 										v-for="substitutePlayerSpec in substitutePlayerSpecs"
+										:key="substitutePlayerSpec.id"
 									>
 										<v-list-item-avatar>
 											<img
@@ -345,21 +348,11 @@ export default {
 				this.snackbarText = "You can only substitute 5 players!";
 				this.snackbar = true;
 			}
-			console.log("this.substitutePlayers : ", this.substitutePlayers);
 		},
 		addSubs(substitutePlayers, substitutionMinute) {
-			let playerInLineup = this.players.filter(
-				(selectedPlayer) => selectedPlayer.id === substitutePlayers.id
-			)[0];
-			console.log("players : ", this.players);
-			console.log("substitutePlayers : ", substitutePlayers);
-			console.log("sub player : ", this.substitutePlayer);
-			console.log("playerInLineup : ", playerInLineup);
-			console.log(substitutionMinute);
 			for (let index = 0; index < substitutePlayers.length; index++) {
 				const element = substitutePlayers[index];
 				if (element.display_name === this.substitutePlayer) {
-					console.log("element : ", element);
 					this.substitutePlayerSpecs.push(element);
 					this.dialog = false;
 				}
