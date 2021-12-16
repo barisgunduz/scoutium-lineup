@@ -156,8 +156,12 @@
 										<v-list-item-action>
 											<v-list-item-action-text
 												class="isPicked"
-												>{{
-													substitutePlayerSpec.substitutionMin
+												>
+												
+													<v-icon color="green lighten-1">mdi-arrow-up-thin</v-icon>
+												
+												{{
+													substitutePlayerSpec.substitutionMinute
 												}}</v-list-item-action-text
 											>
 										</v-list-item-action>
@@ -352,6 +356,7 @@ export default {
 		addSubs(substitutePlayers, substitutionMinute) {
 			for (let index = 0; index < substitutePlayers.length; index++) {
 				const element = substitutePlayers[index];
+				element = {...element, substitutionMinute: substitutionMinute}
 				if (element.display_name === this.substitutePlayer) {
 					this.substitutePlayerSpecs.push(element);
 					this.dialog = false;
