@@ -12,7 +12,7 @@
 ***
 ### TODO
 - Substitute modal needs to be arranged.
-- External font not working.
+- ~~External font not working.~~
 - Loading action for api response
 - Some css fix
 - In/out mins needs to show
